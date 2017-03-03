@@ -1,4 +1,5 @@
 CKEDITOR.dialog.add('tab_title_dialog', function (editor) {
+  'use strict';
   return {
     title: Drupal.t('Tab title'),
     minWidth: 400,
@@ -25,7 +26,6 @@ CKEDITOR.dialog.add('tab_title_dialog', function (editor) {
       }
     ],
     onOk: function () {
-      var dialog = this;
       this.commitContent(this.element);
     },
     onShow: function () {

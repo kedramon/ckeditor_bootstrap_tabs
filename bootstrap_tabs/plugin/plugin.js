@@ -1,8 +1,9 @@
 (function () {
+  'use strict';
   // Detect icon.
   function iconToUse() {
     var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
+    var msie = ua.indexOf('MSIE ');
 
     if (msie > 0) {
       return 'tab.png';
@@ -30,7 +31,7 @@
       // Add CSS for edition state
       var Path = this.path;
       editor.on('mode', function () {
-        if (editor.mode == 'wysiwyg') {
+        if (editor.mode === 'wysiwyg') {
           this.document.appendStyleSheet(Path + 'additional.css');
         }
       });
@@ -50,7 +51,7 @@
         dialog: 'bootstrap_tabs',
         // Before init.
         upcast: function (element) {
-          return element.name == 'div' && element.hasClass('bootstrap-tab');
+          return element.name === 'div' && element.hasClass('bootstrap-tab');
         },
         // Init function is useful after copy paste rebuild.
         init: function () {
@@ -160,7 +161,7 @@
           var element = editor.getSelection().getStartElement();
           var id = element.getAttribute('href');
           if (element.hasAscendant('li') && id) {
-            if (id.substring(0, 1) == '#') {
+            if (id.substring(0, 1) === '#') {
               id = id.substring(1);
             }
 
@@ -218,7 +219,7 @@
           var id = element.getAttribute('href');
 
           if (element.hasAscendant('li') && id) {
-            if (id.substring(0, 1) == '#') {
+            if (id.substring(0, 1) === '#') {
               id = id.substring(1);
             }
             var parts = id.split('-');
@@ -234,7 +235,8 @@
             if (where === 'before') {
               newTab.insertBefore(listItem);
               newTabContent.insertBefore(editor.document.getById(id));
-            } else {
+            }
+            else {
               newTab.insertAfter(listItem);
               newTabContent.insertAfter(editor.document.getById(id));
             }
