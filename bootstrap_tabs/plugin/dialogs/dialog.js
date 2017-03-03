@@ -27,7 +27,7 @@ CKEDITOR.dialog.add('bootstrap_tabs', function (editor) {
             ],
             required: true,
             setup: function (widget) {
-              this.setValue(typeof widget.data.tabCount !== "undefined" ? widget.data.tabCount : 5);
+              this.setValue(typeof widget.data.tabCount !== 'undefined' ? widget.data.tabCount : 5);
             },
             commit: function (widget) {
               widget.setData('tabCount', this.getValue());

@@ -181,7 +181,7 @@
           var element = editor.getSelection().getStartElement();
           var id = element.getAttribute('href');
           if (element.hasAscendant('li') && id) {
-            if (id.substring(0, 1) == '#') {
+            if (id.substring(0, 1) === '#') {
               id = id.substring(1);
             }
             // Remove previous active.
