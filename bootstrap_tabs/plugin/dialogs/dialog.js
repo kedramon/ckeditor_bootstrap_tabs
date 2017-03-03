@@ -1,4 +1,5 @@
 CKEDITOR.dialog.add('bootstrap_tabs', function (editor) {
+  'use strict';
   return {
     title: Drupal.t('Number of tabs'),
     minWidth: 200,
@@ -25,10 +26,10 @@ CKEDITOR.dialog.add('bootstrap_tabs', function (editor) {
               [12, '12']
             ],
             required: true,
-            setup: function(widget) {
-              this.setValue(widget.data.tabCount !== undefined ? widget.data.tabCount : 5);
+            setup: function (widget) {
+              this.setValue(typeof widget.data.tabCount !== "undefined" ? widget.data.tabCount : 5);
             },
-            commit: function(widget) {
+            commit: function (widget) {
               widget.setData('tabCount', this.getValue());
             }
           }
