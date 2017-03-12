@@ -12,7 +12,7 @@ function ckeditor_bootstrap_tabs_ckeditor_plugin() {
   return array(
     'bootstrap_tabs' => array(
       'name' => 'bootstrap_tabs',
-      'desc' => t('Create tabs with CKeditor'),
+      'desc' => t('Create bootstrap tabs with CKeditor'),
       'path' => drupal_get_path('module', 'ckeditor_bootstrap_tabs') . '/bootstrap_tabs/plugin/',
       'buttons' => array(
         'addTab' => array(
