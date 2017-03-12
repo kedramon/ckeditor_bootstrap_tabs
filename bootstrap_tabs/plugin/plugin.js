@@ -38,7 +38,7 @@
 
       // Add widget.
       editor.widgets.add('bootstrap_tabs', {
-        allowedContent: 'div(!bootstrap-tab);',
+        allowedContent: 'div(!bootstrap-tab); ul[!role](nav,nav-tabs); li[!role](active); a[!href, !aria-controls, !role, !data-toggle]',
         requiredContent: 'div(bootstrap-tab)',
         parts: {
           bootstrap_tabs: 'div.bootstrap-tab'
