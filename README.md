@@ -23,8 +23,11 @@ The idea is taken from http://ckeditor.com/addon/bootstrapTabs source. But inste
 * enable CKEditor Bootstrap Tabs module
 * configure text format and enable CKEditor Bootstrap Tabs widget.
 
+## Usage
 A dialog allows the user to choose the number of tabs when inserting new object. 
+
 Using context menu user can:
+
 * choose a tab to remove
 * choose a default tab
 * add tab before current tab
